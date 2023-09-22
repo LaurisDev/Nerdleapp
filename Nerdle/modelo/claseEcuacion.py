@@ -118,7 +118,7 @@ class Ecuacion:
             self.ecuacion.append(str(confirmar_logica)[1])
 
         #print(f" resultado: {confirmar_logica}")
-        print(f"RETORNO DEL METODO GENERAR SECUENCIA = {self.ecuacion}")
+        #print(f"RETORNO DEL METODO GENERAR SECUENCIA = {self.ecuacion}")
 
         return self.ecuacion
 
