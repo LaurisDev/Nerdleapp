@@ -89,20 +89,20 @@ class Ecuacion:
         ecuaciones.append("=")
         self.ecuacion = self.ecuacion + ecuaciones
 
-        print(f"ecuacion generada: {self.ecuacion}")
+        #print(f"ecuacion generada: {self.ecuacion}")
 
         confirmar_logica: int = self.confirmar_logica(ecuaciones)
 
-        print(f" confirmacion, tipo de retorno {type(confirmar_logica)}")
-        print(f" confirmacion, valor del retorno{confirmar_logica}")
-        print(f" ecuacion resultante: {self.ecuacion}")
+        #print(f" confirmacion, tipo de retorno {type(confirmar_logica)}")
+        #print(f" confirmacion, valor del retorno{confirmar_logica}")
+        #print(f" ecuacion resultante: {self.ecuacion}")
 
         if type(confirmar_logica) == float:
-            print("generando otra secuencia")
+            #print("generando otra secuencia")
             self.ecuacion = []
             self.generar_ecuacion()
         elif confirmar_logica < -10:
-            print("generando otra secuencia")
+            #print("generando otra secuencia")
             self.ecuacion = []
             self.generar_ecuacion()
         elif -10 < confirmar_logica < 0:
@@ -117,7 +117,7 @@ class Ecuacion:
             self.ecuacion.append(str(confirmar_logica)[0])
             self.ecuacion.append(str(confirmar_logica)[1])
 
-        print(f" resultado: {confirmar_logica}")
+        #print(f" resultado: {confirmar_logica}")
         print(f"RETORNO DEL METODO GENERAR SECUENCIA = {self.ecuacion}")
 
         return self.ecuacion
