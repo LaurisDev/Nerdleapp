@@ -20,6 +20,15 @@ class Nerdle:
         self.correo_jugador = correo_jugador
         return self.correo_jugador
 
+    def iniciar_juego(self):
+        filas: int = 6
+        columnas: int = 8
+        tablero = [[" " for _ in range(columnas)] for _ in range(filas)]
+        for fila in tablero:
+            print(" | ".join(fila))
+            print("-" * 31)
+        return tablero
+
     def comprobar_ecuacion(self):
         pass
 
