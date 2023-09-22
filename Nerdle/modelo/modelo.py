@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-
+from claseEcuacion import Ecuacion
 
 @dataclass
 class Jugador:
@@ -11,6 +11,7 @@ class Nerdle:
     def __init__(self):
         self.nombre_jugador: str = ""
         self.correo_jugador: str = ""
+        self.ecuacion: Ecuacion = Ecuacion().generar_ecuacion()
 
     def registrar_nombre_jugador(self, nombre_jugador: str) -> str:
         self.nombre_jugador = nombre_jugador
@@ -29,14 +30,3 @@ class Nerdle:
             print("-" * 31)
         return tablero
 
-    def comprobar_ecuacion(self):
-        pass
-
-    def numero_intentos(self):
-        pass
-
-    def estado_juego(self):
-        pass
-
-    def anunciar_resultado(self):
-        pass
