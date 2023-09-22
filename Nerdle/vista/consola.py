@@ -10,6 +10,7 @@ class UIConsola:
         self.opciones = {
             "1": self.mostrar_intrucciones,
             "2": self.iniciar_nuevo_juego,
+            "3": self.ver_estadisticas,
             "0": self.salir
         }
 
@@ -66,6 +67,12 @@ class UIConsola:
             print(f"\n{normas}")
 
     def iniciar_nuevo_juego(self):
+        print(f"{'_':_^30}")
+        titulo = "COMIENZA A JUGAR: "
+        print(f"\n{titulo.center(30)}")
+        self.nerdle.iniciar_juego()
+
+    def ver_estadisticas(self):
         pass
 
     @staticmethod
