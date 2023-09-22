@@ -8,7 +8,7 @@ class UIConsola:
     def __init__(self):
         self.nerdle: Optional[Nerdle] = None
         self.opciones = {
-            "1": self.ver_intrucciones,
+            "1": self.mostrar_intrucciones,
             "2": self.iniciar_nuevo_juego,
             "0": self.salir
         }
@@ -36,12 +36,34 @@ class UIConsola:
                 print(f"{opcion} no es una opción válida")
 
     @staticmethod
-    def ver_intrucciones():
-        titulo = "¿Cómo jugar?"
-        print(f"\n{titulo:_^30}")
-        print("Se debe adivnar la secuencia matemática, en un número limitado de intentos, que consta de números"
-              "entre 0 y 9, operaciones matemáticas básicas y el signo de igualdad")
+    def mostrar_intrucciones():
+        titulo = "¿Cómo Jugar?"
+        subtitulo = "Normas: "
+        instrucciones = [
+                "Bienvenido al juego de adivinanza matemática.",
+                "El objetivo es adivinar la secuencia matemática en un número limitado de intentos.",
+                "La secuencia consta de números entre 0 y 9, operaciones matemáticas básicas y el signo de igualdad.",
+                "Puedes intentar adivinar la secuencia escribiendo una expresión matemática válida.",
+                "Por ejemplo, si la secuencia es '2 + 3 = 5', puedes intentar con '2+3=5'.",
+                "El juego te dará pistas sobre cuántos números y operadores has adivinado correctamente.",
+                "¡Diviértete y buena suerte!"
+            ]
+        normas = [
+            "* Cada suposición es un cálculo.",
+            "* Puedes usar 0 1 2 3 4 5 6 7 8 9 + - * / = ",
+            "* Debe contener un = ",
+            "* Sólo debe tener un número a la derecha de =, no otro cálculo. ",
+            "* Se aplica el orden estándar de operaciones, así que calcule * y / antes de + y - ",
+            "POR EJEMPLO: 3 + 2 * 5 = 13 no 25.",
+            "* Si la respuesta que buscamos es 10+20 = 30, entonces tambien se acepta 20+10=30."
+        ]
 
+        print(f"\n{titulo.center(40)}")
+        for instruccion in instrucciones:
+            print(f"{instruccion}")
+        print(f"\n{subtitulo}")
+        for normas in normas:
+            print(f"\n{normas}")
 
     def iniciar_nuevo_juego(self):
         pass
